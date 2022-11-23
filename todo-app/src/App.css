@@ -7,6 +7,8 @@ body {
   background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
   color: white;
   font-family: "Poppins", sans-serif;
+  width: 100%;
+  max-width: 100%;
   min-height: 100vh;
 }
 header {
@@ -16,9 +18,11 @@ header {
 header,
 form {
   min-height: 20vh;
+
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 form input,
 form button {
@@ -41,6 +45,7 @@ form button:hover {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .todo-list {
@@ -137,3 +142,20 @@ select {
   transform: scale(1.5);
 }
 */
+
+@media screen and (max-width: 568) {
+  .todo {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .todo-item {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    flex-direction: column !important;
+    overflow-x: hidden;
+  }
+  .todo li {
+    display: flex !important;
+    flex-wrap: wrap;
+  }
+}
